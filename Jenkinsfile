@@ -38,9 +38,8 @@ pipeline {
                 branch 'master'
             }
             steps{ 
-                    sshPublisher(
-                        failOnError: true,
-                        continueOnError: false,
+                input 'Does the staging environment look OK?'
+                milestone(1)
                         publishers: [
                             sshPublisherDesc(
                                 configName: 'production',
