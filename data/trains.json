@@ -1,5 +1,5 @@
 {
-	"Trains": [
+	"trains": [
 		{
 			"name": "Hogwarts Express",
 			"stops": [
