@@ -40,6 +40,10 @@ pipeline {
             steps{ 
                 input 'Does the staging environment look OK?'
                 milestone(1)
+                 
+                    sshPublisher(
+                        failOnError: true,
+                        continueOnError: false,
                         publishers: [
                             sshPublisherDesc(
                                 configName: 'production',
@@ -53,6 +57,7 @@ pipeline {
                                 ]
                             )
                         ]
+                    )
             }
         }
     }
