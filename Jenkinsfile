@@ -15,8 +15,6 @@ pipeline {
             steps 
                  {
                     sshPublisher(
-                        failOnError: true,
-                        continueOnError: false,
                         publishers: [
                             sshPublisherDesc(
                                 configName: 'staging',
